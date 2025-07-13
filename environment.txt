@@ -1,0 +1,6 @@
+apache spark 3.5.5
+apache nifi 2.8.1
+ubuntu 24.04
+minio 20250524
+apache airflow 2.9.0
+postgresql 16

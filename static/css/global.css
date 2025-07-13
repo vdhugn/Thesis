@@ -1,0 +1,106 @@
+.aqi-label {
+    background: transparent;
+    border: none;
+    pointer-events: auto;
+}
+
+#legend div {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.aqi-card {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    color: #000;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background: #dee9e0;
+    margin: 0;
+    padding: 0px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.aqi-block {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    color: #000;
+    margin-bottom: 20px;
+}
+.aqi-value {
+    font-size: 48px;
+    font-weight: bold;
+}
+.aqi-label {
+    font-size: 24px;
+    font-weight: bold;
+}
+.update-time {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+.chart-section {
+    margin: 30px 0;
+}
+.chart-section h4 {
+    margin-bottom: 10px;
+}
+.weather {
+    font-size: 16px;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+.weather p {
+    margin: 6px 0;
+}
+
+.card-wrapper {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card, .weather-wrapper {
+  flex: 1 1 20%;
+}
+
+.aqi-health-reco {
+  text-align: center;
+  font-size: 0.95em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: #000;
+}

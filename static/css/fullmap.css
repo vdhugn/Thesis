@@ -1,0 +1,55 @@
+.map-container {
+  position: relative;
+  height: calc(100vh - 56px);
+  width: 100%;
+  margin-top: 0px;
+  z-index: 0;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+#info-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    z-index: 1000;
+    width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+#aqi-legend-bar {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background: rgba(255,255,255,0.9);
+  border-radius: 3px;
+  overflow: hidden;
+  z-index: 1000;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.legend-box {
+  display: flex;
+  padding: 6px 10px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  height: 10px;
+  align-items: center;
+  justify-content: center;
+}

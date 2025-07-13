@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>City Air Quality</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navigator.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/search_result.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
+</head>
+
+<body>
+
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="map.html" class="nav-link">AQI Map</a>
+      <a href="dashboard.html" class="nav-link">View Stations</a>
+    </div>
+    <div class="nav-right">
+      <div id="search-container">
+        <input id="city-search-input" type="text" placeholder="Search for city name..." />
+        <button id="city-search-btn">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="card">
+    <h2 style="text-align:center;">Air Quality in <span id="city-name">Loading...</span></h2>
+
+    <!-- AQI Card -->
+    <div class="aqi-section">
+      <h3>🌍 Air quality index</h3>
+      <div class="aqi-summary">
+        <div class="aqi-card">
+          <h4>AQI level</h4>
+          <p id="aqi-value">--</p>
+          <p id="aqi-label" style="font-size:14px;">--</p>
+        </div>
+        <div class="aqi-card">
+          <h4>PM2.5</h4>
+          <p id="pm25">--</p>
+        </div>
+        <div class="aqi-card">
+          <h4>PM10</h4>
+          <p id="pm10">--</p>
+        </div>
+        <div class="aqi-card">
+          <h4>NO₂</h4>
+          <p id="no2">--</p>
+        </div>
+        <div class="aqi-card">
+          <h4>O₃</h4>
+          <p id="o3">--</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-row">
+      <!-- Weather Card -->
+      <div class="weather-wrapper" id="weather-wrapper">
+        <div class="weather-card" id="weather-card">
+          <p>📍 Getting your weather...</p>
+        </div>
+      </div>
+
+      <!-- Station List -->
+      <div class="aqi-section station-wrapper">
+        <h3>📍 Stations info</h3>
+        <ul id="station-list" class="station-list"></ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+</body>
+</html>

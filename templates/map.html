@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AQI Map</title>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navigator.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/fullmap.css') }}">
+</head>
+
+<body>
+  <!-- Navigator -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="map.html" class="nav-link">AQI Map</a>
+      <a href="dashboard.html" class="nav-link">View Stations</a>
+    </div>
+    <div class="nav-right">
+      <div id="search-container">
+        <input id="city-search-input" type="text" placeholder="Search for city name..." />
+        <button id="city-search-btn" type="button">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="map-container">
+    <div id="map"></div>
+    <div id="aqi-legend-bar">
+      <span class="legend-box" style="background:#a8e05f">Good</span>
+      <span class="legend-box" style="background:#fdd64b">Moderate</span>
+      <span class="legend-box" style="background:#ff9b57">Unhealthy for sensitive group</span>
+      <span class="legend-box" style="background:#fe6a69">Unhealthy</span>
+      <span class="legend-box" style="background:#8f3f97">Very Unhealthy</span>
+      <span class="legend-box" style="background:#7e0023">Hazardous</span>
+    </div>
+
+    <div id="info-panel">
+      <h3 id="station-name">Station Info</h3>
+      <p><b>Last update:</b> <span id="station-time"></span></p>
+      <div id="aqi-summary"></div>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <script src="{{ url_for('static', filename='js/aqi-utils.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/fullmap.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/choropleth_map.js') }}"></script>
+
+</body>
+</html>

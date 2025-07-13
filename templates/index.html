@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Vietnam Air Quality</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/navigator.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/province-ranking.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
+  <style>
+    .map-title {
+      font-family: 'Noto Sans', sans-serif;
+      font-size: 18px;
+      margin-top: 40px;
+      margin-left: 20px;
+      padding: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigator -->
+  <nav class="top-nav">
+    <div class="nav-left">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="map.html" class="nav-link">AQI Map</a>
+      <a href="dashboard.html" class="nav-link">View Stations</a>
+    </div>
+    <div class="nav-right">
+      <div id="search-container">
+        <input id="city-search-input" type="text" placeholder="Search for city name..." />
+        <button id="city-search-btn" type="button">Search</button>
+      </div>
+    </div>
+  </nav>
+  
+  <h2 class="map-title">Vietnam Air Quality Map</h2>
+
+  <div class="map-container">
+    <div id="map"></div>
+    <button id="fullscreen-btn" type="button">⛶</button>
+    <div id="aqi-legend-bar">
+      <span class="legend-box" style="background:#a8e05f">Good</span>
+      <span class="legend-box" style="background:#fdd64b">Moderate</span>
+      <span class="legend-box" style="background:#ff9b57">Unhealthy for sensitive group</span>
+      <span class="legend-box" style="background:#fe6a69">Unhealthy</span>
+      <span class="legend-box" style="background:#8f3f97">Very Unhealthy</span>
+      <span class="legend-box" style="background:#7e0023">Hazardous</span>
+    </div>
+
+    <div id="info-panel">
+      <h3 id="station-name">Station Info</h3>
+      <p><b>Last update:</b> <span id="station-time"></span></p>
+      <div id="aqi-summary"></div>
+    </div>
+  </div>
+
+  <!-- <div class="weather-wrapper" id="weather-wrapper">
+    <div class="weather-card" id="weather-card">
+      <p>📍 Getting your weather...</p>
+    </div>
+  </div> -->
+
+  <div class="rank-pro">
+    <div id="ranking-box">
+      <div class="ranking-header">Top AQI</div>
+      <ul id="ranking-list"></ul>
+    </div>
+
+    <div class="province-table">
+      <div class="table-header">
+        <div class="col-aqi">AQI</div>
+        <div class="col-info">Province and Region</div>
+        <div class="col-data">Pollutants details</div>
+      </div>
+      
+      <div class="province-scroll">
+        <div id="province-rows" class="province-rows"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+  <script src="{{ url_for('static', filename='js/aqi-utils.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/choropleth_map.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+
+</body>
+</html>

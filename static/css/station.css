@@ -1,0 +1,84 @@
+.chart-section {
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.aqi-summary {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.aqi-summary span {
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-left: 8px;
+  color: #fff;
+}
+
+.chart-toggle {
+  display: flex;
+  gap: 10px;
+}
+
+.toggle-btn {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.toggle-btn.active {
+  background-color: #a0a9b7;
+  color: white;
+  border-color: #a0a9b7;
+}
+
+.chart-body canvas {
+  width: 50%;
+  height: 300px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.forecast-section {
+  margin: 20px;
+  width: 30%;
+}
+
+#forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#forecast-table thead tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#forecast-table th,
+#forecast-table td {
+  padding: 8px;
+}
+
+#forecast-table th {
+  text-align: left;
+}
+
+#forecast-table td:last-child {
+  text-align: right;
+}

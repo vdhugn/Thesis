@@ -1,0 +1,175 @@
+.rank-pro {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 20px;
+  flex-wrap: wrap; /* ensures responsiveness */
+}
+
+/* Station ranking box */
+#ranking-box {
+  position: relative;
+  margin: 45px 20px;
+  background: #ffffff;
+  border-top: 1px solid #ddd;
+  border-radius: 6px 6px 6px 6px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  z-index: 1;
+  width: 40%;        
+}
+
+.ranking-header {
+  display: flex;
+  background: #0a8c4f;
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+  border-radius: 6px 6px 0 0;
+  font-size: 16px;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.rank-number {
+  font-weight: bold;
+  width: 24px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+}
+
+.city-name {
+  flex: 1;
+  padding: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #222;
+}
+
+.aqi-badge {
+  padding: 4px 10px;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 38px;
+  text-align: center;
+}
+
+
+/* Province table */
+.province-table {
+  margin: 45px 0;
+  width: 50%;
+  font-family: 'Noto Sans', sans-serif;
+  background: #fff;
+  flex: 1;
+  flex-wrap: wrap;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.table-header {
+  position: sticky;
+  display: flex;
+  background: #0a8c4f;
+  color: white;
+  padding: 12px 16px;
+  font-weight: bold;
+  border-radius: 6px 6px 0 0;
+  font-size: 14px;
+}
+
+.table-header div {
+  flex: 1;
+}
+
+.col-aqi {
+  flex: 0 0 120px;
+}
+
+.col-info {
+  flex: 2;
+}
+
+.col-data {
+  flex: 3;
+  display: flex;
+  justify-content: space-around;
+}
+
+.province-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 16px;
+}
+
+.province-row:last-child {
+  border-bottom: none;
+}
+
+.province-aqi {
+  flex: 0 0 120px;
+  text-align: center;
+}
+
+.province-aqi .icon {
+  font-size: 30px;
+  display: block;
+}
+
+.province-info {
+  flex: 2;
+}
+
+.province-info .name {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.province-info .desc {
+  color: #666;
+  font-size: 14px;
+}
+
+.province-data {
+  flex: 3;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+}
+
+.province-data div {
+  text-align: center;
+}
+
+.province-data span {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.province-scroll {
+  max-height: 500px; /* adjust to desired height */
+  overflow-y: auto;
+}
+
+.province-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.province-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}

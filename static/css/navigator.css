@@ -1,0 +1,58 @@
+.top-nav {
+  display: flex;
+  height: 35px;
+  justify-content: space-between;
+  align-items: center;
+  background: #0a8c4f;
+  padding: 10px 16px;
+  border-bottom: 1px solid #dddddd6e;
+}
+
+.nav-left {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-link {
+  font-family: 'Noto Sans', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-link:hover {
+  background: #dcdcdc;
+}
+
+#search-container {
+  display: flex;
+  height: 22px;
+  align-items: center;
+  background: #f0f2f5;
+  border-radius: 20px;
+  padding: 4px 8px;
+  margin-right: 100px;
+}
+
+#city-search-input {
+  border: none;
+  background: transparent;
+  padding: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+#city-search-btn {
+  font-family: 'Noto Sans', sans-serif;
+  background: none;
+  border: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
